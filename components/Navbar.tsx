@@ -13,7 +13,7 @@ const Navbar = () => {
         BlockGuard
       </label>
 
-      <div className="hidden md:flex space-x-3 text-[#454545]">
+      <div className="hidden md:flex space-x-6 text-[#454545]">
         <Link href="/events">Events</Link>
         <Link href="/how-it-works">How It Works</Link>
       </div>

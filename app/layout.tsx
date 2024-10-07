@@ -31,11 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${open_sans.className} antialiased`}
-      >
+      <body className={`${open_sans.className} antialiased`}>
         <Navbar />
-        {children}
+        <div className="px-3 md:px-6 max-w-[1400px] mx-auto">{children}</div>
       </body>
     </html>
   );
