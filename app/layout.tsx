@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 const open_sans = Open_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={`${open_sans.className} antialiased`}>
         <Navbar />
         <div className="px-3 md:px-6 max-w-[1400px] mx-auto">{children}</div>
+        <Footer />
       </body>
     </html>
   );
