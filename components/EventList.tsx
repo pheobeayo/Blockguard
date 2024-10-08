@@ -61,7 +61,7 @@ const EventList = () => {
       <h1 className="font-bold text-[20px] mb-5 text-[#0A2C66]">Events</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-3 gap-y-3">
         {events.map((event, index) => (
-          <div key={index} className="relative cursor-pointer rounded-[16px] border border-[1.5px] border-[#E7E7E7] shadow-md">
+          <div key={index} className="relative cursor-pointer rounded-[16px] border-[1.5px] border-[#E7E7E7] shadow-md">
             <div
               className={`absolute top-2 left-2 ${
                 event.type == "Closed" ? "text-[#E53935]" : "text-[#43A047]"
