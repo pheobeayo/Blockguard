@@ -19,12 +19,16 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:flex space-x-3">
-        <Button className="bg-[#0A2C66]">
-          <LogIn className="w-4 h-4 mr-2" /> Sign Up
-        </Button>
-        <Button variant="outline" className="text-[#005544]">
-          <LogIn className="w-4 h-4 mr-2" /> Sign In
-        </Button>
+        <Link href="/setup">
+          <Button className="bg-[#0A2C66]">
+            <LogIn className="w-4 h-4 mr-2" /> Sign Up
+          </Button>
+        </Link>
+        <Link href="/signin">
+          <Button variant="outline" className="text-[#005544]">
+            <LogIn className="w-4 h-4 mr-2" /> Sign In
+          </Button>
+        </Link>
       </div>
 
       <section className="flex md:hidden items-center">
@@ -57,12 +61,16 @@ const Navbar = () => {
             </Link>
 
             <div className="space-x-3">
-              <Button className="bg-[#0A2C66]">
-                <LogIn className="w-4 h-4 mr-2" /> Sign Up
-              </Button>
-              <Button variant="outline" className="text-[#005544]">
-                <LogIn className="w-4 h-4 mr-2" /> Sign In
-              </Button>
+              <Link href="/setup">
+                <Button className="bg-[#0A2C66]">
+                  <LogIn className="w-4 h-4 mr-2" /> Sign Up
+                </Button>
+              </Link>
+              <Link href="/signin">
+                <Button variant="outline" className="text-[#005544]">
+                  <LogIn className="w-4 h-4 mr-2" /> Sign In
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
