@@ -4,11 +4,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { LogIn, Menu, X } from "lucide-react";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const pathname = usePathname();
+  // const pathname = usePathname();
   return (
     <div className="flex justify-between items-center max-w-[1400px] mx-auto px-3 md:px-6 py-4 border-b shadow-sm">
       <Link href="/">
