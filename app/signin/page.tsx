@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Company from "@/assets/signing/company.svg";
-import People from "@/assets/signing/people.svg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
