@@ -43,37 +43,37 @@ const OngoingEvents = () => {
     },
   ];
   return (
-    <div className="pt-10">
-      <div className="flex justify-between items-center">
+    <div className="">
+      <div className="flex justify-between items-center py-6 px-2 rounded-t-lg mb-5 border-[1.5px] border-[#E7E7E7]">
         <h3 className="text-[#5D5D5D] text-[18px] font-bold">
           Ongoing Events (3)
         </h3>
         <Link href="/setup">
           <Button className="bg-[#0A2C66] font-bold text-sm">
-            <Plus className="mr-2 h-4 w-4" /> Create New Event
+            <Plus className="mr-0 md:mr-2 h-4 w-4" /> <p className="hidden md:flex">Create New Event</p>
           </Button>
         </Link>
       </div>
 
-      <div>
+      <div className="flex flex-col space-y-3">
         {events.map((item, index) => (
-          <div key={index} className="flex border-[1.5px] border-[#E7E7E7]">
-            <div className="w-[390px]">
-              <Image src={item.image} alt="img" className="w-full" />
+          <div key={index} className="flex flex-col md:flex-row border-[1.5px] border-[#E7E7E7] rounded-lg">
+            <div className="md:min-w-[300px] md:min-h-[240px]">
+              <Image src={item.image} alt="img" className="w-full h-full rounded-l-lg object-cover object-center" />
             </div>
 
-            <div>
+            <div className="px-2 py-4">
               <h2 className="text-[#454545] font-bold text-[18px]">{item.title}</h2>
-              <p className="text-[#454545] text-sm">{item.about}</p>
-              <div className="flex items-center space-x-2 text-xs text-[#454545]">
+              <p className="text-[#454545] text-sm mt-2">{item.about}</p>
+              <div className="flex items-center space-x-2 text-xs text-[#454545] mt-5">
                 <Image src={Gift} alt="img" />
                 <p>{item.amount}</p>
               </div>
-              <div className="flex items-center space-x-2 text-xs text-[#454545]">
+              <div className="flex items-center space-x-2 text-xs text-[#454545] mt-3">
                 <Image src={Date} alt="img" />
                 <p>{item.date}</p>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-3">
                 <div className="flex items-center space-x-2 text-xs text-[#454545]">
                   <Image src={People} alt="img" />
                   <p>{item.noOfParticipants}</p>

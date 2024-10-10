@@ -11,7 +11,7 @@ const OverviewPage = () => {
       <div>
         <Stats />
       </div>
-      <div className="flex">
+      <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8 pt-10">
         <OngoingEvents />
         <Transactions />
       </div>
