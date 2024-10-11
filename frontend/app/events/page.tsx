@@ -11,7 +11,7 @@ const EventPage = () => {
         <h1 className="text-[#454545] font-semibold text-[40px] py-3">
           All Events
         </h1>
-        <Link href="/setup">
+        <Link href="/create-event">
           <Button className="bg-[#0A2C66] font-bold text-sm">
             <Plus className="mr-0 md:mr-2 h-4 w-4" />{" "}
             <p className="hidden md:flex">Create New Event</p>

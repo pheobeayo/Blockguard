@@ -48,7 +48,7 @@ const OngoingEvents = () => {
         <h3 className="text-[#5D5D5D] text-[18px] font-bold">
           Ongoing Events (3)
         </h3>
-        <Link href="/setup">
+        <Link href="/create-event">
           <Button className="bg-[#0A2C66] font-bold text-sm">
             <Plus className="mr-0 md:mr-2 h-4 w-4" /> <p className="hidden md:flex">Create New Event</p>
           </Button>
