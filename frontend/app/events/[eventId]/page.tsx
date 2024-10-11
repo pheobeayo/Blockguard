@@ -20,7 +20,7 @@ const EventSinglePage = () => {
 
       <p className="text-[#454545] mt-3">
         These pages reflect a real-world, user-friendly blockchain platform that
-        emphasizes trust, transparency, and automation. Let me know if you'd
+        emphasizes trust, transparency, and automation. Let me know if you&apos;d
         like more specific examples or additional features!
       </p>
 
