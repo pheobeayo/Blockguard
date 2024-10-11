@@ -32,7 +32,7 @@ const StepThree = ({
             <p>
               This design integrates wallet-based signups, automated prize
               distribution, and easy management for companies, developers, and
-              organizers. Let me know if you'd like more details or changes to
+              organizers. Let me know if you&apos;d like more details or changes to
               specific pages!
             </p>
           </div>
@@ -77,11 +77,11 @@ const StepThree = ({
                 Event Created Successfully!
               </h2>
               <p className="text-center text-[#454545] text-sm mt-1">
-                “Your event October Blockchain Hackathon has been created
+              &quot;Your event October Blockchain Hackathon has been created
                 successfully! You have locked 15 ETH as the prize pool, which is
                 now securely staked in a smart contract.Participants can now
                 start registering, and once the event ends, winners will
-                automatically receive their payouts."
+                automatically receive their payouts.&quot;
               </p>
 
               <div className="flex justify-center items-center">
