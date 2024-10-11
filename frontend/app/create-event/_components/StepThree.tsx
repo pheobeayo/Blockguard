@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
-import React from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import Image from "next/image";
+import Link from "next/link";
+import Done from "@/assets/eventList/done.svg"
 
 const StepThree = () => {
   return (
@@ -50,7 +57,43 @@ const StepThree = () => {
           </div>
         </div>
 
-        <Button className="bg-[#0A2C66] w-full mt-7">Create Event</Button>
+        <Dialog>
+          <DialogTrigger className="w-full">
+            <Button className="bg-[#0A2C66] w-full mt-7">Create Event</Button>
+          </DialogTrigger>
+          <DialogContent>
+            <div>
+              <div className="flex justify-center items-center">
+                <Image src={Done} alt="img" />
+              </div>
+
+              <h2 className="text-center text-[#0645A2] text-[18px] font-bold mt-5">Event Created Successfully!</h2>
+              <p className="text-center text-[#454545] text-sm mt-1">
+                “Your event October Blockchain Hackathon has been created
+                successfully! You have locked 15 ETH as the prize pool, which is
+                now securely staked in a smart contract.Participants can now
+                start registering, and once the event ends, winners will
+                automatically receive their payouts."
+              </p>
+
+              <div className="flex justify-center items-center">
+                <div className="flex space-x-5 mt-10 w-full justify-center items-center max-w-2xl">
+                  <Link href="/create-event" className="w-full">
+                    <Button variant="outline" className="text-[#0A2C66] w-full">
+                      Create Another Event
+                    </Button>
+                  </Link>
+
+                  <Link href="/events" className="w-full">
+                    <Button className="bg-[#0A2C66] w-full">
+                      Manage Events
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );
