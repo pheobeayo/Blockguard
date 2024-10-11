@@ -59,7 +59,7 @@ const OngoingEvents = () => {
         {events.map((item, index) => (
           <div key={index} className="flex flex-col md:flex-row border-[1.5px] border-[#E7E7E7] rounded-lg">
             <div className="md:min-w-[300px] md:min-h-[240px]">
-              <Image src={item.image} alt="img" className="w-full h-full rounded-l-lg object-cover object-center" />
+              <Image src={item.image} alt="img" className="w-full h-full rounded-t-lg md:rounded-l-lg object-cover object-center" />
             </div>
 
             <div className="px-2 py-4">
