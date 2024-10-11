@@ -1,14 +1,20 @@
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Image from "next/image";
 import Link from "next/link";
-import Done from "@/assets/eventList/done.svg"
+import Done from "@/assets/eventList/done.svg";
+import { Dispatch, SetStateAction } from "react";
 
-const StepThree = () => {
+const StepThree = ({
+    setCurrentStep,
+  }: {
+    setCurrentStep: Dispatch<SetStateAction<number>>;
+  }) => {
   return (
     <div className="flex justify-center items-center min-h-[65vh] pt-10">
       <div className="max-w-[600px] w-full border-2 border-[#E7E7E7] rounded-[12px] md:rounded-[20px] px-2 py-8 md:p-8">
@@ -67,7 +73,9 @@ const StepThree = () => {
                 <Image src={Done} alt="img" />
               </div>
 
-              <h2 className="text-center text-[#0645A2] text-[18px] font-bold mt-5">Event Created Successfully!</h2>
+              <h2 className="text-center text-[#0645A2] text-[18px] font-bold mt-5">
+                Event Created Successfully!
+              </h2>
               <p className="text-center text-[#454545] text-sm mt-1">
                 “Your event October Blockchain Hackathon has been created
                 successfully! You have locked 15 ETH as the prize pool, which is
@@ -79,15 +87,23 @@ const StepThree = () => {
               <div className="flex justify-center items-center">
                 <div className="flex space-x-5 mt-10 w-full justify-center items-center max-w-2xl">
                   <Link href="/create-event" className="w-full">
-                    <Button variant="outline" className="text-[#0A2C66] w-full">
-                      Create Another Event
-                    </Button>
+                    <DialogClose className="w-full">
+                      <Button
+                        variant="outline"
+                        className="text-[#0A2C66] w-full"
+                        onClick={() => setCurrentStep(1)}
+                      >
+                        Create Another Event
+                      </Button>
+                    </DialogClose>
                   </Link>
 
                   <Link href="/events" className="w-full">
-                    <Button className="bg-[#0A2C66] w-full">
-                      Manage Events
-                    </Button>
+                    <DialogClose className="w-full">
+                      <Button className="bg-[#0A2C66] w-full">
+                        Manage Events
+                      </Button>
+                    </DialogClose>
                   </Link>
                 </div>
               </div>

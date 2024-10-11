@@ -16,7 +16,7 @@ const CreateEventPage = () => {
       case 2:
         return <StepTwo setCurrentStep={setCurrentStep} />;
       case 3:
-        return <StepThree />;
+        return <StepThree setCurrentStep={setCurrentStep} />;
       default:
         return null;
     }
