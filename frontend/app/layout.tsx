@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import { Web3Modal } from "@/context/web3Modal";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+
 const open_sans = Open_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -22,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${open_sans.className} antialiased`}>
+      <Web3Modal>
         <Navbar />
         <div className="px-3 md:px-6 max-w-[1400px] mx-auto">{children}</div>
         <Footer />
+        </Web3Modal>
       </body>
     </html>
   );

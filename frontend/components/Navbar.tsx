@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { LogIn, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
+
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
@@ -64,6 +65,7 @@ const Navbar = () => {
             <LogIn className="w-4 h-4 mr-2" /> Sign In
           </Button>
         </Link>
+        <w3m-button />
       </div>
 
       <section className="flex md:hidden items-center">
