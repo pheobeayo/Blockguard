@@ -4,11 +4,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { LogIn, Menu, X } from "lucide-react";
-// import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  // const pathname = usePathname();
+  const pathname = usePathname();
   return (
     <div className="flex justify-between items-center max-w-[1400px] mx-auto px-3 md:px-6 py-4 border-b shadow-sm">
       <Link href="/">
@@ -17,10 +17,40 @@ const Navbar = () => {
         </label>
       </Link>
 
-      <div className="hidden md:flex space-x-6 text-[#454545]">
-        <Link href="/overview">Overview</Link>
-        <Link href="/events">Events</Link>
-        <Link href="/how-it-works">How It Works</Link>
+      <div className="hidden md:flex md:items-center space-x-6 text-[#454545]">
+        <Link href="/overview">
+          <div
+            className={`${
+              pathname === "/overview"
+                ? "bg-[#0A2C66] text-white px-3 py-2 rounded-xl"
+                : ""
+            }`}
+          >
+            Overview
+          </div>
+        </Link>
+        <Link href="/events">
+          <div
+            className={`${
+              pathname === "/events"
+                ? "bg-[#0A2C66] text-white px-3 py-2 rounded-xl"
+                : ""
+            }`}
+          >
+            Events
+          </div>
+        </Link>
+        <Link href="/transactions">
+          <div
+            className={`${
+              pathname === "/transactions"
+                ? "bg-[#0A2C66] text-white px-3 py-2 rounded-xl"
+                : ""
+            }`}
+          >
+            Transactions
+          </div>
+        </Link>
       </div>
 
       <div className="hidden md:flex space-x-3">
@@ -58,14 +88,26 @@ const Navbar = () => {
             <X className="h-7 w-7" />
           </div>
           <div className="flex flex-col items-center justify-between min-h-[250px] w-full px-3 uppercase text-[#454545]">
-            <Link href="/overview" className="font-semibold">
+            <Link
+              onClick={() => setIsNavOpen(false)}
+              href="/overview"
+              className="font-semibold"
+            >
               Overview
             </Link>
-            <Link href="/events" className="font-semibold">
+            <Link
+              onClick={() => setIsNavOpen(false)}
+              href="/events"
+              className="font-semibold"
+            >
               Events
             </Link>
-            <Link href="/how-it-works" className="font-semibold">
-              How It Works
+            <Link
+              onClick={() => setIsNavOpen(false)}
+              href="/transactions"
+              className="font-semibold"
+            >
+              Transactions
             </Link>
 
             <div className="space-x-3">
