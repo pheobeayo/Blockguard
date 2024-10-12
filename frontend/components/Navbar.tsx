@@ -122,7 +122,9 @@ const Navbar = () => {
                 <Button variant="outline" className="text-[#005544]">
                   <LogIn className="w-4 h-4 mr-2" /> Sign In
                 </Button>
+                <div className="mt-6">
                 <w3m-button />
+                </div>
               </Link>
             </div>
           </div>
