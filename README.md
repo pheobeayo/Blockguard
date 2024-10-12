@@ -72,4 +72,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For inquiries, please reach out to:
 
-- **Your Name**: [Your Email](joyegbu@gmail.com)
+- **Joy**: [joyegbu@gmail.com](joyegbu@gmail.com)
